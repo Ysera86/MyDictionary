@@ -6,7 +6,7 @@ namespace MyDictionary
     {
         static void Main(string[] args)
         {
-            MyDictionary dict = new MyDictionary();
+            MyDictionary<int, string> dict = new MyDictionary<int,string>();
             dict.Add(1, "Merve");
             dict.Add(2, "Taylan");
 
@@ -16,21 +16,21 @@ namespace MyDictionary
             }
         }
     }
-    public class MyDictionary
+    public class MyDictionary<KeyType,ValueType>
     {
-        public int[] Keys { get; set; }
-        public object[] Values { get; set; }
+        public KeyType[] Keys { get; set; }
+        public ValueType[] Values { get; set; }
 
         public MyDictionary()
         {
-            Keys = new int[0];
-            Values = new object[0];
+            Keys = new KeyType[0];
+            Values = new ValueType[0];
         }
-        public void Add(int key, object value)
+        public void Add(KeyType key, ValueType value)
         {
             int count = Keys.Length + 1;
-            int[] keyTemp = new int[count];
-            object[] valueTemp = new object[count];
+            KeyType[] keyTemp = new KeyType[count];
+            ValueType[] valueTemp = new ValueType[count];
 
             Keys.CopyTo(keyTemp, 0);
             Values.CopyTo(valueTemp, 0);
