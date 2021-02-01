@@ -9,6 +9,7 @@ namespace MyDictionary
             MyDictionary<int, string> dict = new MyDictionary<int,string>();
             dict.Add(1, "Merve");
             dict.Add(2, "Taylan");
+            dict.Add(3, "Melis");
 
             for (int i = 0; i < dict.Keys.Length; i++)
             {
